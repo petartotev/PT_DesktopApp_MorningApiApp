@@ -447,8 +447,10 @@ namespace MorningApiApp
                         Content = $"{_listArticlesSelected.Count} articles found.",
                         Background = new SolidColorBrush(Colors.Magenta),
                         Foreground = new SolidColorBrush(Colors.Black),
-                        HorizontalAlignment = HorizontalAlignment.Left,
-                        Margin = new Thickness(0, -600, 0, 0)
+                        HorizontalAlignment = HorizontalAlignment.Center,
+                        HorizontalContentAlignment = HorizontalAlignment.Center,
+                        VerticalAlignment = VerticalAlignment.Bottom,
+                        Margin = new Thickness(0, 600, 0, 0)
                     };
                     MyGrid.Children.Add(labelArticlesCount);
 
@@ -459,9 +461,8 @@ namespace MorningApiApp
                         Content = $"BACK",
                         Background = new SolidColorBrush(Colors.Cyan),
                         Foreground = new SolidColorBrush(Colors.Black),
-                        HorizontalAlignment = HorizontalAlignment.Center,
-                        VerticalAlignment = VerticalAlignment.Bottom,
-                        Margin = new Thickness(0, 600, 0, 0)
+                        HorizontalAlignment = HorizontalAlignment.Left,
+                        Margin = new Thickness(0, -600, 0, 0)
                     };
                     buttonBack.Click += ClickOnMenuButtonNews;
                     MyGrid.Children.Add(buttonBack);

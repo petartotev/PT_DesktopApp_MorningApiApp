@@ -3,11 +3,11 @@
     public enum NewsSourceEnum
     {
         AbcNews,
-        //AbcNewsAu, // "category": "general", "language": "en", "country": "au"
-        //Aftenposten, // "category": "general", "language": "no", "country": "no"
+        //AbcNewsAu,            // "category": "general", "language": "en", "country": "au"
+        //Aftenposten,          // "category": "general", "language": "no", "country": "no"
         AlJazeeraEnglish,
-        //AnsaIt, // "category": "general", "language": "it", "country": "it"
-        //Argaam, // "category": "business", "language": "ar", "country": "sa"
+        //AnsaIt,               // "category": "general", "language": "it", "country": "it"
+        //Argaam,               // "category": "business", "language": "ar", "country": "sa"
         ArsTechnica,            // "category": "technology", "language": "en", "country": "us"
         //AryNews,                // "category": "general", "language": "ud", "country": "pk"
         //AssociatedPress,        // "category": "general", "language": "en", "country": "us"
