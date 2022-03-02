@@ -1,4 +1,7 @@
-﻿namespace MorningApiApp.ExternalServices.NewsApiOrg
+﻿using MorningApiApp.ExternalServices.NewsApiOrg.Enums;
+using System.Collections.Generic;
+
+namespace MorningApiApp.ExternalServices.NewsApiOrg
 {
     public class NewsApiOrgConstants
     {
@@ -32,5 +35,19 @@
         // top-headlines?sources=techcrunch
 
         // "message": "You cannot mix the sources parameter with the country or category parameters."
+
+        public static List<NewsSourceEnum> NewsTechnologySources = new List<NewsSourceEnum>
+        {
+            NewsSourceEnum.ArsTechnica,
+            NewsSourceEnum.CryptoCoinsNews,
+            NewsSourceEnum.Engadget,
+            NewsSourceEnum.HackerNews,
+            NewsSourceEnum.Recode,
+            NewsSourceEnum.TechCrunch,
+            NewsSourceEnum.TechRadar,
+            NewsSourceEnum.TheNextWeb,
+            NewsSourceEnum.TheVerge,
+            NewsSourceEnum.Wired
+        };
     }
 }

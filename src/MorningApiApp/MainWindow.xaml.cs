@@ -232,7 +232,13 @@ namespace MorningApiApp
 
             foreach (var source in Enum.GetValues(typeof(NewsSourceEnum)))
             {
-                _comboBoxNewsSource.Items.Add(new ComboBoxItem { Content = (NewsSourceEnum)source });
+                var sourceEnum = (NewsSourceEnum)source;
+
+                _comboBoxNewsSource.Items.Add(new ComboBoxItem 
+                {
+                    Content = sourceEnum,
+                    FontWeight = NewsApiOrgConstants.NewsTechnologySources.Contains(sourceEnum) ? FontWeights.Bold : FontWeights.Normal
+                });
             }
 
             _ = MyGrid.Children.Add(_comboBoxNewsSource);
