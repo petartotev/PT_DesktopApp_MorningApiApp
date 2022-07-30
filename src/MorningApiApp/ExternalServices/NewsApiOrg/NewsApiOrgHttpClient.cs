@@ -24,7 +24,7 @@ namespace MorningApiApp.ExternalServices.NewsApiOrg
             else if ((NewsEndpointEnum)Enum.Parse(typeof(NewsEndpointEnum), endpoint) == NewsEndpointEnum.Everything)
             {
                 url += NewsApiOrgConstants.QueryEverything;
-                url += string.Format(NewsApiOrgConstants.Keyword, !string.IsNullOrWhiteSpace(input) ? input.ToString() : "Donuts");
+                url += string.Format(NewsApiOrgConstants.Keyword, !string.IsNullOrWhiteSpace(input) ? input.ToString() : "Raspberry");
 
                 if (!string.IsNullOrWhiteSpace(source))
                 {
@@ -236,7 +236,7 @@ namespace MorningApiApp.ExternalServices.NewsApiOrg
 }
 
 // Everything, -, -, -, -, - => https://newsapi.org/v2/everything?q=Bulgaria&from=2022-02-25&to=2022-02-26&sortBy=publishedAt&apiKey=
-// Everything, -, -, "Donuts", -, - => https://newsapi.org/v2/everything?q=Donuts&from=2022-02-25&to=2022-02-26&sortBy=publishedAt&apiKey=
+// Everything, -, -, "Raspberry", -, - => https://newsapi.org/v2/everything?q=Raspberry&from=2022-02-25&to=2022-02-26&sortBy=publishedAt&apiKey=
 // Everything, -, -, "Russia", Bbc-News, Popularity => https://newsapi.org/v2/everything?q=Russia&sources=bbc-news&from=2022-02-25&to=2022-02-26&sortBy=popularity&apiKey=
 // TopHeadlines, set From, set To, -, -, FoxNews, popularity => https://newsapi.org/v2/top-headlines?sources=fox-news&from=2022-02-23&to=2022-02-24&sortBy=popularity&apiKey=
 // TopHeadlines, -, -, Technology, bg, -, popularity => https://newsapi.org/v2/top-headlines?category=Technology&country=bg&from=2022-02-25&to=2022-02-26&sortBy=popularity&apiKey=

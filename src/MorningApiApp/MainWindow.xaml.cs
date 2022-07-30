@@ -369,7 +369,7 @@ namespace MorningApiApp
                 MyGrid.Children.Remove(_labelNewsAnd);
 
                 _labelNewsTextInput = CreateLabelOnGrid("Enter keyword...", new Thickness(-195, -140, 0, 0));
-                _textBoxTextInput = CreateTextBoxOnGrid("Donuts", setup: x =>
+                _textBoxTextInput = CreateTextBoxOnGrid("Raspberry", setup: x =>
                 {
                     x.Width = 380;
                     x.Height = 25;
@@ -590,7 +590,8 @@ namespace MorningApiApp
             };
             borderAuthorAndDate.Child = new TextBlock
             {
-                Text = $" by {article.Author} / ({article.PublishedAt.ToString("yyyy-MM-dd-HH-mm-ss")})",
+                Text = (!string.IsNullOrWhiteSpace(article.Author) ? $"by {article.Author} / " : string.Empty) +
+                $"({article.PublishedAt:yyyy-MM-dd-HH-mm-ss})",
                 FontSize = 12,
                 TextWrapping = TextWrapping.Wrap
             };
