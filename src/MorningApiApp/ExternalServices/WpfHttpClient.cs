@@ -11,6 +11,7 @@ namespace MorningApiApp.ExternalServices
             string result = string.Empty;
 
             HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0");
 
             for (int i = 0; i < 10; i++)
             {
